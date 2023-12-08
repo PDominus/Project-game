@@ -27,7 +27,7 @@ public class PlayerSprint : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
         {
             PlayerController.instance.isRunning = true;
-            stamina -= 0.05f;
+            stamina -= 0.01f;
         }
         else
         {
@@ -36,7 +36,7 @@ public class PlayerSprint : MonoBehaviour
 
         if (stamina < 100 && !Input.GetKey(KeyCode.LeftShift))
         {
-            stamina += 0.225f;
+            stamina += 0.002f;
         }
 
     }

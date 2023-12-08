@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e536336dde3d46ec99ebc7c82b143dd
+guid: 366e868d1447b415ba43db3c946b2a36
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_walk (1)_0
+      name: player_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79ed5cfc2b2d41c1b06ed0b71647f9c
-      internalID: 1194183050
+      spriteID: 67b42be1e4796485d8f7668d81529808
+      internalID: 920102849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_1
+      name: player_idle_1
       rect:
         serializedVersion: 2
         x: 48
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4b1301d9efe4870a13a8b84530faf9
-      internalID: 1079855557
+      spriteID: 98a82dafb8c0042a79d1bbe2068f67bf
+      internalID: 120489309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_2
+      name: player_idle_2
       rect:
         serializedVersion: 2
         x: 96
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a96fcec8aa4439d9562668c265952d
-      internalID: -279050167
+      spriteID: 564c5c7ebf0804500a1582aca60a5bcf
+      internalID: -398430240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_3
+      name: player_idle_3
       rect:
         serializedVersion: 2
         x: 144
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5458190b55684c6c8b53f0040912255
-      internalID: 1500717306
+      spriteID: a7840c559a3044f54b4e2c75f317f7e2
+      internalID: -1758630064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_4
+      name: player_idle_4
       rect:
         serializedVersion: 2
         x: 192
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee33eb95e813340799f9382aa338c316
-      internalID: 839726359
+      spriteID: df9aa13c9789249419237bfe2844a187
+      internalID: 870141823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_5
+      name: player_idle_5
       rect:
         serializedVersion: 2
         x: 240
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b995fc6ae8044ae6add2075c5779ca0
-      internalID: 123460262
+      spriteID: ad09f70f3d907413fab2f90c982a879b
+      internalID: -730514957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_6
+      name: player_idle_6
       rect:
         serializedVersion: 2
         x: 288
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9ba06f65ffa144fa97b6d983cfef3f0
-      internalID: 54425883
+      spriteID: 5e1bd56c8828a4042b722beca928c4fd
+      internalID: -1321009311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk (1)_7
+      name: player_idle_7
       rect:
         serializedVersion: 2
         x: 336
@@ -266,8 +266,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d7aed125067d4b56920bbcc94404369
-      internalID: -1599167926
+      spriteID: 45bfe6b7962554de1b0ba46cb8367e37
+      internalID: -1176586861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_idle_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1569f0c6a017f41f0927380316f29e48
+      internalID: -1708300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_idle_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffb1c3825e904080a4c9a8cab698a59
+      internalID: 1972220161
       vertices: []
       indices: 
       edges: []
@@ -283,14 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_walk (1)_0: 1194183050
-      player_walk (1)_1: 1079855557
-      player_walk (1)_2: -279050167
-      player_walk (1)_3: 1500717306
-      player_walk (1)_4: 839726359
-      player_walk (1)_5: 123460262
-      player_walk (1)_6: 54425883
-      player_walk (1)_7: -1599167926
+      player_idle_0: 920102849
+      player_idle_1: 120489309
+      player_idle_2: -398430240
+      player_idle_3: -1758630064
+      player_idle_4: 870141823
+      player_idle_5: -730514957
+      player_idle_6: -1321009311
+      player_idle_7: -1176586861
+      player_idle_8: -1708300130
+      player_idle_9: 1972220161
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
