@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -82,6 +83,14 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
         anim.SetBool("isRunning" , isRunning);
 
+    }
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.gameObject.CompareTag("ToNextScene"))
+        {
+            //Debug.Log("Crash!");
+            SceneManager.LoadScene("Scene2");
+        }
     }
 
 }
