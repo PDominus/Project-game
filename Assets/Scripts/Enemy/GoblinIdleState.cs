@@ -14,11 +14,13 @@ public class GoblinIdleState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateTimer = 1f;
+        stateTimer = enemy.idleTime;
     }
 
     public override void Exit()
     {
+        stateTimer = 0;
+        Debug.Log("Before Exit Idle StateTimer issss " + stateTimer);
         base.Exit();
     }
 
@@ -26,7 +28,7 @@ public class GoblinIdleState : EnemyState
     {
         base.Update();
         //Debug.Log("stateTimer = " + stateTimer);
-        if(stateTimer <= 0)
+        if(stateTimer < 0)
         {
             Debug.Log("stateTimer < 0 !!!!!!!!!!!!!!!");
             stateMachine.ChangeState(enemy.runState);

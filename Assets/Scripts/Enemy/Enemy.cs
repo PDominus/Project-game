@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
+    [Header("Move Info")]
+    public float moveSpeed;
+    public float idleTime;
 
     public EnemyStateMachine stateMachine { get; private set; }
 
@@ -17,5 +20,13 @@ public class Enemy : Entity
     {
         base.Update();
         stateMachine.currentState.Update();
+    }
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+
+        Gizmos.color = Color.yellow;
+        //Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDir, transform.position.y));
     }
 }

@@ -24,4 +24,5 @@ public class EnemyGoblin : Enemy
     {
         base.Update();
     }
+    
 }
