@@ -30,6 +30,7 @@ public class GoblinRunState : EnemyState
         enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, enemy.rb.velocity.y);
         Debug.Log("This is x velocity -> " + enemy.rb.velocity.x);
         Debug.Log("enemy.facingDir = " + enemy.facingDir);
+        
 
         if(enemy.IsWallDetected() || !enemy.IsGroundDetected())
         {
@@ -37,6 +38,11 @@ public class GoblinRunState : EnemyState
             enemy.Flip();
             stateMachine.ChangeState(enemy.idleState);
             Debug.Log("Now idleeeeeeeeeeeeee");
+        }
+        else
+        {
+            
+            Debug.Log("eieieieeiei");
         }
     }
 }
