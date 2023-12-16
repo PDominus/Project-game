@@ -144,5 +144,4 @@ public class Enemy_behaviour : MonoBehaviour
     {
         cooling = true;
     }
-
 }

@@ -18,8 +18,7 @@ public class GoblinRunState : EnemyState
 
     public override void Exit()
     {
-        stateTimer = -1;
-        Debug.Log("Before Exit Run StateTimer issss " + stateTimer);
+        //stateTimer = -1;
         base.Exit();
     }
 
@@ -28,21 +27,11 @@ public class GoblinRunState : EnemyState
         base.Update();
 
         enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, enemy.rb.velocity.y);
-        Debug.Log("This is x velocity -> " + enemy.rb.velocity.x);
-        Debug.Log("enemy.facingDir = " + enemy.facingDir);
-        
 
         if(enemy.IsWallDetected() || !enemy.IsGroundDetected())
         {
-            Debug.Log("Before Flipppppp");
             enemy.Flip();
             stateMachine.ChangeState(enemy.idleState);
-            Debug.Log("Now idleeeeeeeeeeeeee");
-        }
-        else
-        {
-            
-            Debug.Log("eieieieeiei");
         }
     }
 }

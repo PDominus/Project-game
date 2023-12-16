@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
-    public float moveRun;
+    public float runSpeed;
 
     public bool isRunning;
 
@@ -45,16 +45,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-
         if (isRunning)
         {
-            theRB.velocity = new Vector2(moveRun * Input.GetAxisRaw("Horizontal"), theRB.velocity.y);
+            theRB.velocity = new Vector2(runSpeed * Input.GetAxisRaw("Horizontal"), theRB.velocity.y);
         }
         else { 
 
-        theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal"), theRB.velocity.y);
+            theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal"), theRB.velocity.y);
         }
 
         if (theRB.velocity.x < 0)

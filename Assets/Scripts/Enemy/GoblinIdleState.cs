@@ -19,21 +19,16 @@ public class GoblinIdleState : EnemyState
 
     public override void Exit()
     {
-        stateTimer = 0;
-        Debug.Log("Before Exit Idle StateTimer issss " + stateTimer);
+        //stateTimer = 0;
         base.Exit();
     }
 
     public override void Update()
     {
         base.Update();
-        //Debug.Log("stateTimer = " + stateTimer);
         if(stateTimer < 0)
         {
-            Debug.Log("stateTimer < 0 !!!!!!!!!!!!!!!");
             stateMachine.ChangeState(enemy.runState);
-            Debug.Log("enemy.runState is OK");
         }
-        Debug.Log("enemy.runState is OKKKKKKKKKKKKK");
     }
 }
