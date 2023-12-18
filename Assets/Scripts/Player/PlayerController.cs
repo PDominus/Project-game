@@ -81,13 +81,13 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isRunning" , isRunning);
 
     }
-    private void OnTriggerEnter2D(Collider2D target)
+    /*private void OnTriggerEnter2D(Collider2D target)
     {
         if (target.gameObject.CompareTag("ToNextScene"))
         {
             //Debug.Log("Crash!");
             SceneManager.LoadScene("Scene2");
         }
-    }
+    }*/
 
 }
