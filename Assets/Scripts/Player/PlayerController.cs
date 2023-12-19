@@ -127,6 +127,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    /*private void OnTriggerEnter2D(Collider2D target)
+
     private void FixedUpdate()
     {
         if (isDashing)
@@ -142,7 +144,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Crash!");
             SceneManager.LoadScene("Scene2");
         }
-    }
+    }*/
 
     private IEnumerator Dash()
     {
