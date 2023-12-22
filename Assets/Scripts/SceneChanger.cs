@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     [SerializeField] private string ToWhatScene;
-    [SerializeField] private GameObject uiElement;
+    [SerializeField] private GameObject floatingText;
+    //[SerializeField] private GameObject uiElement;
     private bool enterAllowed;
 
     public GameObject player;
@@ -42,7 +43,8 @@ public class SceneChanger : MonoBehaviour
     {
         if (target.gameObject.CompareTag("Player")){
             Debug.Log("Crash!");
-            uiElement.SetActive(true);
+            ShowText("E");
+            //uiElement.SetActive(true);
             enterAllowed = true;
         }
     }
@@ -59,8 +61,17 @@ public class SceneChanger : MonoBehaviour
     {
         if (target.gameObject.CompareTag("Player"))
         {
-            uiElement.SetActive(false);
+            //uiElement.SetActive(false);
             enterAllowed = false;
+        }
+    }
+
+    void ShowText(string text)
+    {
+        if (floatingText)
+        {
+            GameObject prefabText = Instantiate(floatingText, transform.position, Quaternion.identity);
+            prefabText.GetComponentInChildren<TextMesh>().text = text;
         }
     }
 }
