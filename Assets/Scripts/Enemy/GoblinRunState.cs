@@ -18,7 +18,6 @@ public class GoblinRunState : EnemyState
 
     public override void Exit()
     {
-        //stateTimer = -1;
         base.Exit();
     }
 
