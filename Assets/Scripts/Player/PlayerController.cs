@@ -46,8 +46,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
         anim = GetComponent<Animator>();
         theSR = GetComponent<SpriteRenderer>();
     }
@@ -74,6 +72,7 @@ public class PlayerController : MonoBehaviour
 
         if(theRB.velocity.y > 0)
         {
+            //anim.SetBool("canJump", false);
             anim.SetBool("JumpUp", true);
             anim.SetBool("JumpDown", false);
         }
@@ -95,10 +94,10 @@ public class PlayerController : MonoBehaviour
         }
 
         IsGround = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+        anim.SetFloat("yVelocity", theRB.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
         {
-            anim.SetFloat("yVelocity", theRB.velocity.y);
             if (IsGround)
             {
                 anim.SetBool("canJump", true);
