@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy_behaviour : MonoBehaviour
 {
+    public static Enemy_behaviour instance;
+
     #region Public Variables
     public Transform rayCast;
     public LayerMask raycastMask;
@@ -16,11 +18,11 @@ public class Enemy_behaviour : MonoBehaviour
     #region Private Variables
     private RaycastHit2D hit;
     private GameObject target;
-    private Animator anim;
-    private float distance;
-    private bool attackMode;
+    public Animator anim;
+    public float distance;
+    public bool attackMode;
     private bool inRange;
-    private bool cooling;
+    public bool cooling;
     private float intTimer;
     #endregion
 
@@ -28,6 +30,7 @@ public class Enemy_behaviour : MonoBehaviour
     {
         intTimer = timer;
         anim = GetComponent<Animator>();
+        instance = this;
     }
 
     void Update()
