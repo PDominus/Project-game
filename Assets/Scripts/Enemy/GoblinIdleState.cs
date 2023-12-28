@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinIdleState : EnemyState
+public class GoblinIdleState : GoblinGroundedState
 {
-    private EnemyGoblin enemy;
-
-    public GoblinIdleState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, EnemyGoblin enemy) : base(enemy, stateMachine, animBoolName)
+    public GoblinIdleState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, EnemyGoblin enemy) : base(enemyBase, stateMachine, animBoolName, enemy)
     {
-        this.enemy = enemy;
     }
 
     public override void Enter()
@@ -25,9 +22,10 @@ public class GoblinIdleState : EnemyState
     public override void Update()
     {
         base.Update();
+
         if(stateTimer < 0)
         {
-            stateMachine.ChangeState(enemy.runState);
+            stateMachine.ChangeState(enemy.moveState);
         }
     }
 }
