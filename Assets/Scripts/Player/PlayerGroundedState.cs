@@ -27,12 +27,16 @@ public class PlayerGroundedState : PlayerState
         /* if (Input.GetKeyDown(KeyCode.Q))
             stateMachine.ChangeState(player.counterAttack); */
 
-        /* if (Input.GetKeyDown(KeyCode.Mouse0))
-            stateMachine.ChangeState(player.primaryAttack); */
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            stateMachine.ChangeState(player.primaryAttack);
 
-        
+        if (player.IsSlopeDetected())
+        {
+            Debug.Log("stand on slope");
+            stateMachine.ChangeState(player.idleState);
+        }
 
-        if (!player.IsGroundDetected())
+        if (!player.IsGroundDetected() && !player.IsSlopeDetected())
             stateMachine.ChangeState(player.airState);
 
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())

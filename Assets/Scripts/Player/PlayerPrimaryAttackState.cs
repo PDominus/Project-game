@@ -21,13 +21,18 @@ public class PlayerPrimaryAttackState : PlayerState
             comboCounter = 0;
 
         player.anim.SetInteger("ComboCounter", comboCounter);
+        // player.anim.speed = 1.2f : This is how to do attack speed for each weapon
 
         float attackDir = player.facingDir;
 
         if (xInput != 0)
+        {
             attackDir = xInput;
+        }
+        
 
-       // player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
+       //make player hop
+       player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
 
         stateTimer = 0.1f;
     }
