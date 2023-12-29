@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinMoveState : GoblinGroundedState
+public class GoblinRunState : EnemyState
 {
-    public GoblinMoveState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, EnemyGoblin enemy) : base(enemyBase, stateMachine, animBoolName, enemy)
+    private EnemyGoblin enemy;
+
+    public GoblinRunState(Enemy enemyBase, EnemyStateMachine stateMachine, string animBoolName, EnemyGoblin enemy) : base(enemyBase, stateMachine, animBoolName)
     {
+        this.enemy = enemy;
     }
 
     public override void Enter()
@@ -22,7 +25,7 @@ public class GoblinMoveState : GoblinGroundedState
     {
         base.Update();
 
-        enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.velocity.y);
+        enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, enemy.rb.velocity.y);
 
         if(enemy.IsWallDetected() || !enemy.IsGroundDetected())
         {
